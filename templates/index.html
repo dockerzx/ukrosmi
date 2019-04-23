@@ -46,18 +46,12 @@
   </div>
   <div class="row">
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <a href="https://news.ycombinator.com/item?id=19725290" target="_blank" rel="nofollow noopener">Termshark – A terminal UI for tshark, inspired by Wireshark</a>
-        <p>272 points • 18 comments • apr 23, 2019</p>
-      </li>
-      <li class="list-group-item">
-        <a href="https://news.ycombinator.com/item?id=19725290" target="_blank" rel="nofollow noopener">Termshark – A terminal UI for tshark, inspired by Wireshark</a>
-        <p>272 points • 18 comments • apr 23, 2019</p>
-      </li>
-      <li class="list-group-item">
-        <a href="https://news.ycombinator.com/item?id=19725290" target="_blank" rel="nofollow noopener">Termshark – A terminal UI for tshark, inspired by Wireshark</a>
-        <p>272 points • 18 comments • apr 23, 2019</p>
-      </li>
+      {% for news in news_list %}
+        <li class="list-group-item">
+          <a href="{{ news.link }}" target="_blank" rel="nofollow noopener">{{ news.title }}</a>
+          <p>272 points • 18 comments • {{ news.date }}</p>
+        </li>
+      {% endfor %}
     </ul>
   </div>
 </div>
